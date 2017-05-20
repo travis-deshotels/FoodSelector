@@ -1,0 +1,36 @@
+[
+    {
+		"name": "Applebees",
+		"choices": [
+            {
+				"person": "Bob",
+				"likes": [
+					"chicken", "burger", "sandwich"
+				]
+			},
+			{
+				"person": "Jill",
+				"likes": [
+					"sandwich", "salad", "burger", "wings", "apples", "bees"
+				]
+			}
+		]
+	},
+	{
+		"name": "McDonalds",
+		"choices": [
+            {
+				"person": "Bob",
+				"likes": [
+					"chicken", "burger", "sandwich"
+				]
+			},
+			{
+				"person": "Jill",
+				"likes": [
+					"salad", "spicy chicken sandwich"
+				]
+			}
+		]
+	}
+]
