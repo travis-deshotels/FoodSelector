@@ -34,8 +34,14 @@ def chooseFood():
     print(person['likes'][choice])
 
 try:
-  data = json.loads(open('food.json').read())
+  if len(sys.argv) == 1:
+    print("Please supply a filename")
+    sys.exit(1)
+  data = json.loads(open(sys.argv[1]).read())
   chooseFood()
+except FileNotFoundError:
+  print("Invalid filename")
+  sys.exit(1)
 except json.decoder.JSONDecodeError:
   print("Invalid JSON object")
 sys.exit(0)
