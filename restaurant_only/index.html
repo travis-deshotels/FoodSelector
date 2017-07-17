@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+<body>
+	<div class="centerme">
+		<div class="heading">Enter your restaurants</div>
+		<br><br>
+		<div>
+			<form name="myForm">
+				<div><input type="text" class="textbox" id="restaurant" placeholder="name goes here" /></div>
+				<div>
+					<button class="button" type="button" onclick="addRestaurant();">Add</button>
+					<button class="button" type="button" onclick="removeRandomElement()">Remove One</button>
+				</div>
+			</form>
+		</div>
+		<div id="newElements">
+		</div>
+		<script type="text/javascript" src="restaurant.js"></script>
+	</div>
+</body>
+</html>
