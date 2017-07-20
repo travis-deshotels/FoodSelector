@@ -20,8 +20,10 @@ function createDiv(text){
 }
 
 function removeRandomElement(){
-	let element = getRandomElement();
-	element.parentNode.removeChild(element);
+    if(indexes.length > 0){
+        let element = getRandomElement();
+        element.parentNode.removeChild(element);
+    }
 }
 
 function getRandomElement(){
