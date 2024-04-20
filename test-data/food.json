@@ -1,36 +1,41 @@
 [
-    {
-		"name": "Applebees",
-		"choices": [
-            {
-				"person": "Bob",
-				"likes": [
-					"chicken", "burger", "sandwich"
-				]
-			},
-			{
-				"person": "Jill",
-				"likes": [
-					"sandwich", "salad", "burger", "wings", "apples", "bees"
-				]
-			}
-		]
-	},
-	{
-		"name": "McDonalds",
-		"choices": [
-            {
-				"person": "Bob",
-				"likes": [
-					"chicken", "burger", "sandwich"
-				]
-			},
-			{
-				"person": "Jill",
-				"likes": [
-					"salad", "spicy chicken sandwich"
-				]
-			}
-		]
-	}
+  {
+    "name": "Applebees",
+    "choices": [
+      {
+        "person": "Bob",
+        "likes": [
+          "apples",
+          "bees"
+        ]
+      },
+      {
+        "person": "Jill",
+        "likes": [
+          "sandwich",
+          "fries"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wendy's",
+    "choices": [
+      {
+        "person": "Bob",
+        "likes": [
+          "baconator",
+          "spicy chicken",
+          "chili"
+        ]
+      },
+      {
+        "person": "Jill",
+        "likes": [
+          "baconator",
+          "salad"
+        ]
+      }
+    ]
+  }
 ]

@@ -1,20 +1,19 @@
-import argparse
-import fileinput
 import json
 
 stuff = []
 record_data = []
 
+
 def process_last_record(record_data):
     process_record(record_data)
+
 
 def remove_empty_records(l):
     return list(filter(None, l))
 
+
 def process_record(record_data):
-    node = {'name': '',
-            'choices' : []}
-    node['name'] = record_data[0].strip().split(',')[0]
+    node = {'name': record_data[0].strip().split(',')[0], 'choices': []}
     for i in range(1, len(record_data)):
         choices_node = {'person': '',
                         'likes': []}
@@ -25,11 +24,11 @@ def process_record(record_data):
         node['choices'].append(choices_node)
     stuff.append(node)
 
-def main():
+
+def process_csv_data(csv_data):
     global record_data
-    parser = argparse.ArgumentParser()
-    parser.add_argument('filename', help='CSV file to convert')
-    for line in fileinput.input(parser.parse_args().filename):
+
+    for line in csv_data:
         words = line.split(',')
         if len(words[0]) == 0:
             process_record(record_data)
@@ -37,7 +36,20 @@ def main():
         else:
             record_data.append(line)
     process_last_record(record_data)
-    print(json.dumps(stuff))
+    out_data = json.dumps(stuff)
+    print(out_data)
+
+    return out_data
+
+
+def main():
+    import fileinput
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('filename', help='CSV file to convert')
+    process_csv_data(fileinput.input(parser.parse_args().filename))
+
 
 if __name__ == '__main__':
     main()
