@@ -2,7 +2,7 @@ import fileinput
 import json
 import os.path
 import unittest
-from csvconverter import process_csv_data
+from csvconverter import CsvConverter
 
 
 class MyTestCase(unittest.TestCase):
@@ -61,7 +61,7 @@ class MyTestCase(unittest.TestCase):
         f = open('foo', 'w')
         f.write(self.test_data)
         f.close()
-        out = process_csv_data(fileinput.input('foo'))
+        out = CsvConverter().process_csv_data(fileinput.input('foo'))
         self.assertEqual(json.dumps(self.expected_output), out)
         if os.path.exists('foo'):
             os.remove('foo')
