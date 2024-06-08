@@ -46,10 +46,10 @@ Jill: salad
 * JSON
 * CSV*
 
-### CSV converter
+## CSV converter
 Data from a spreadsheet can be imported to the lunch script using the CSV converter script.
 
-Format is
+### Format is
 ```
 Restaurant1
 Person1, choice1, choice2 ...
@@ -61,13 +61,18 @@ Person1 ...
 ...
 ```
 
-#### Sample input
+### Sample input
 ```csv
 Applebees,,,
-Raju,apples,bees,
+Bob,apples,bees,
 Al,sandwich,fries,
 ,,,
 Wendy's,,,
-Ed,baconator,spicy chicken,chili
-Rosa,baconator,salad,
+Jill,baconator,spicy chicken,chili
+Rose,baconator,salad,
 ```
+
+## Docker
+
+1. `docker build -t selector .` in the selector directory  
+2. `docker-run.sh <HOST_VOLUME> <DATA_FILE>`
