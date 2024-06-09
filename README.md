@@ -75,4 +75,4 @@ Rose,baconator,salad,
 ## Docker
 
 1. `docker build -t selector .` in the selector directory  
-2. `docker-run.sh <HOST_VOLUME> <DATA_FILE>`
+2. `docker-run.sh <HOST_VOLUME> <DATA_FILE>` or `docker-run.cmd <HOST_VOLUME> <DATA_FILE>`
